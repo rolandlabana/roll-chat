@@ -14,40 +14,53 @@ This is the readme file for roll-chat application
 roll-chat is a simple chat program to help students learn about sockets, etc. It used the Node Package Manager (npm)
 
 It consists of two programs:
-index.js - a server that accepts connections, messages, disconnections from clients and when a message is received, broadcasts it to all other connected clients (group chat)
-index.html - the client code that creates a simple chat interface and allows messages to be entered and sent to the server to be forwarded on to other connected clients.
+
+`index.js` - a server that accepts connections, messages, disconnections from clients and when a message is received, broadcasts it to all other connected clients (group chat)
+
+`index.html` - the client code that creates a simple chat interface and allows messages to be entered and sent to the server to be forwarded on to other connected clients.
+
 
 
 Before running the code, make sure in addition to the libraries being installed on the server, make sure to have the correct directory structure:
 
-// Here is a view of the directory where this file resides:
-// roll-chat/
-// 	index.js             	package-lock.json       public
-// 	node_modules         	package.json
-//
-// roll-chat/public/
-//	index.html
-//
+Here is a view of the directory where this file resides:
+
+```
+roll-chat/
+  index.js             	package-lock.json       public
+  node_modules         	package.json
+
+roll-chat/public/
+  index.html
+```
 
 “roll-chat” can be changed to any directory name you like. 
 
 To use the program, make sure to install all the necessary libraries on the server side:
 
-1. 
-Node.js and npm: Download and install Node.js from the official website (https://nodejs.org/en/). It includes npm, the Node Package Manager.
+1. Node.js and npm: Download and install Node.js from the official website (https://nodejs.org/en/). It includes npm, the Node Package Manager.
 Socket.IO Library: Install it using npm:
 Bash:
-npm install socket.io
-2.
-Install the Express Module:
+
+``npm install socket.io``
+
+2. Install the Express Module:
 Open a terminal in the directory containing index.js.
 Run the following command in Bash
-npm install express
+
+``npm install express``
+
 This will download and install the Express module locally in your project's node_modules folder.
 
-On the client side, if you are using one computer for a demo, simply open two or more browser windows and enter localhost:3000 into the URL bar.
+On the client side, if you are using one computer for a demo, simply open two or more browser windows and enter `localhost:3000` into the URL bar.
 
-Then you can send messages back and forth. Currently, messages are not output to the GUI, so use the developers console in the browser window to see the messages sent and received. 
+Then you can send messages back and forth. 
+Currently, messages are not output to the GUI, so use the developers console in the browser window to see the messages sent and received. 
+
+## That's it!
+
+
+# Using clients on other computers
 To use the client on another computer, the browser window will have to be pointed to the public IP address of the server computer. To do this do the following:
 
 To connect to the chat application from a different computer, users would need to use the correct address or hostname instead of localhost. Here's how it works:
@@ -64,7 +77,7 @@ In the client-side JavaScript code (index.html), replace localhost with the appr
 const socket = io('http://192.168.1.100:3000'); 
 
 
-Reference:
+# Reference:
 The code is designed to enable real-time chat between multiple clients, even if they're on different computers. Here's how it works:
 1. Server-Side Connectivity:
 The Node.js server, running the index.js code, acts as a central hub for communication.
