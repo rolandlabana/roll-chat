@@ -1,0 +1,65 @@
+
+<!
+// index.html
+//
+// (c) 2023 Roland Labana
+//
+// This file creates a simple chat interface. It works in conjunction with
+// the index.js file that should reside in the dir above this file which
+// must be in the public/ dir.
+//
+// currently, the sent and received msgs are not output to the GUI, so
+// use the browser console window to see the msgs.
+//
+// to use this file, start the server code in a Mac window:
+//      node index.js
+// Then open a browser window and url to localhost:3000
+// Open another window or tab and do the same. 
+// then msgs can be sent back and forth.
+// more than two windows can be opened.
+// if you want to use the client on another computer, you have to browser
+// to the public ip of the server computer. see the readme file for how to do this.
+/!>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat App</title>
+<script src="/socket.io/socket.io.js"></script>
+
+</head>
+
+<body>
+  <h1>Chat App</h1>
+  <form id="chat-form">
+    <input type="text" id="chat-message" placeholder="Enter your message">
+    <button type="submit">Send</button>
+  </form>
+  <div id="chat-window"></div>
+
+  <script>
+    // JavaScript code here, after the HTML elements
+    const socket = io();
+
+  // Handle form submission and message sending
+  const chatForm = document.getElementById('chat-form');
+  chatForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const message = document.getElementById('chat-message').value;
+    socket.emit('chat message', message);
+    // Clear input field and append message to chat window (implement this)
+    console.log("You: ", message)
+  });
+
+  // Receive messages from server and display
+  socket.on('chat message', (msg) => {
+    // Append message to chat window (implement this)
+     console.log("Them: ", msg)
+  });
+
+    // ... rest of your JavaScript code
+  </script>
+</body>
+</html>
+
