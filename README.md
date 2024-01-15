@@ -28,6 +28,8 @@ Then open two or more browser windows and enter the following in the URL bar:
 
 `localhost:3000`
 
+Then make sure you SHOW THE JAVA CONSOLE ON EACH BROWSWER WINDOW since currenlty messagages are not printed to the web page and have to be viewed on the console.
+
 Before running the code, make sure in addition to the libraries being installed on the server, make sure to have the correct directory structure:
 
 Here is a view of the directory where this file resides:
