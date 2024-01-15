@@ -22,13 +22,11 @@ It consists of two programs:
 To Run the program do the following:
 In a terminal window run the server code:
 
-'''
-node index.js
-'''
+`node index.js`
+
 Then open two or more browser windows and enter the following in the URL bar:
-'''
-localhost:3000
-'''
+
+`localhost:3000`
 
 Before running the code, make sure in addition to the libraries being installed on the server, make sure to have the correct directory structure:
 
