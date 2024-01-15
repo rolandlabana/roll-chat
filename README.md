@@ -19,6 +19,7 @@ It consists of two programs:
 
 `index.html` - the client code that creates a simple chat interface and allows messages to be entered and sent to the server to be forwarded on to other connected clients.
 
+## To Run the App
 To Run the program do the following:
 In a terminal window run the server code:
 
@@ -29,6 +30,8 @@ Then open two or more browser windows and enter the following in the URL bar:
 `localhost:3000`
 
 Then make sure you SHOW THE JAVA CONSOLE ON EACH BROWSWER WINDOW since currenlty messagages are not printed to the web page and have to be viewed on the console.
+
+## Setup Prior to Running the App
 
 Before running the code, make sure in addition to the libraries being installed on the server, make sure to have the correct directory structure:
 
