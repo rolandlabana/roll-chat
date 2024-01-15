@@ -20,7 +20,7 @@ It consists of two programs:
 `index.html` - the client code that creates a simple chat interface and allows messages to be entered and sent to the server to be forwarded on to other connected clients.
 
 ## To Run the App
-To Run the program do the following:
+
 In a terminal window run the server code:
 
 `node index.js`
