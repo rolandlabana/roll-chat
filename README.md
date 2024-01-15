@@ -31,6 +31,8 @@ Then open two or more browser windows and enter the following in the URL bar:
 
 Then make sure you SHOW THE JAVA CONSOLE ON EACH BROWSWER WINDOW since currenlty messagages are not printed to the web page and have to be viewed on the console.
 
+Note: To run clients on other computers, see below
+
 ## Setup Prior to Running the App
 
 Before running the code, make sure in addition to the libraries being installed on the server, make sure to have the correct directory structure:
